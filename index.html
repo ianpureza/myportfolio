@@ -696,6 +696,168 @@
   }
 </style>
 
+<!-- Floating Shapes Animation -->
+<style>
+  /* Floating Shapes Container */
+  .floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .shape {
+    position: absolute;
+    opacity: 0.15;
+    border-radius: 50%;
+    animation: float 20s infinite linear;
+  }
+
+  .shape-1 {
+    width: 100px;
+    height: 100px;
+    background: #0084ff;
+    top: 10%;
+    left: 10%;
+    animation: float-1 25s infinite linear;
+  }
+
+  .shape-2 {
+    width: 80px;
+    height: 80px;
+    background: #00a3ff;
+    top: 50%;
+    right: 5%;
+    animation: float-2 30s infinite linear;
+  }
+
+  .shape-3 {
+    width: 120px;
+    height: 120px;
+    background: #0066cc;
+    bottom: 10%;
+    left: 5%;
+    animation: float-3 35s infinite linear;
+  }
+
+  .shape-4 {
+    width: 90px;
+    height: 90px;
+    background: #00d4ff;
+    top: 30%;
+    right: 10%;
+    animation: float-4 28s infinite linear;
+  }
+
+  .shape-5 {
+    width: 110px;
+    height: 110px;
+    background: #0084ff;
+    bottom: 20%;
+    right: 15%;
+    animation: float-5 32s infinite linear;
+  }
+
+  @keyframes float-1 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(100px, -100px) rotate(90deg);
+    }
+    50% {
+      transform: translate(50px, -200px) rotate(180deg);
+    }
+    75% {
+      transform: translate(-50px, -100px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes float-2 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-150px, 150px) scale(0.8);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+
+  @keyframes float-3 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(150px, -150px) rotate(120deg);
+    }
+    66% {
+      transform: translate(-100px, -50px) rotate(240deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes float-4 {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+      transform: translate(-120px, 120px) scale(1.1) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 0) scale(1) rotate(360deg);
+    }
+  }
+
+  @keyframes float-5 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(80px, -120px) rotate(90deg);
+    }
+    50% {
+      transform: translate(0, -180px) rotate(180deg);
+    }
+    75% {
+      transform: translate(-80px, -120px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+
+  /* Ensure content stays above shapes */
+  main {
+    position: relative;
+    z-index: 2;
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<!-- Floating Shapes HTML -->
+<div class="floating-shapes">
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="shape shape-4"></div>
+  <div class="shape shape-5"></div>
+</div>
+
 
 
 

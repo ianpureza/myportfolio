@@ -850,6 +850,11 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   transition: 0.3s;
   line-height: 0;
+  display: none;
+}
+
+.preview-icon {
+  display: none !important;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,

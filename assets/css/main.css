@@ -804,6 +804,12 @@ section,
 .portfolio .portfolio-item {
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio .portfolio-item .portfolio-info {

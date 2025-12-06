@@ -1134,13 +1134,14 @@
           const img = this.querySelector('img');
           const title = this.querySelector('.portfolio-info h4').textContent;
           const description = this.querySelector('.portfolio-info p').textContent;
+          const videoLink = this.querySelector('.watch-video-btn')?.href || null;
           
-          showPortfolioModal(img.src, title, description);
+          showPortfolioModal(img.src, title, description, videoLink);
         });
       });
     });
     
-    function showPortfolioModal(imageSrc, title, description) {
+    function showPortfolioModal(imageSrc, title, description, videoLink = null) {
       // Create modal container
       let modal = document.getElementById('portfolio-modal');
       if (!modal) {
@@ -1149,6 +1150,12 @@
         modal.className = 'portfolio-modal';
         document.body.appendChild(modal);
       }
+      
+      const videoButton = videoLink ? `
+        <a href="${videoLink}" target="_blank" class="btn btn-sm btn-primary watch-video-btn" style="margin-top: 20px;">
+          <i class="bi bi-play-fill"></i> Watch Video
+        </a>
+      ` : '';
       
       modal.innerHTML = `
         <div class="modal-overlay">
@@ -1163,6 +1170,7 @@
               <div class="modal-description">
                 <h3>${title}</h3>
                 <p>${description}</p>
+                ${videoButton}
               </div>
             </div>
           </div>
